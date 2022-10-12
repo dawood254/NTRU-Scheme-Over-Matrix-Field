@@ -1,0 +1,14 @@
+function output=mod_(M,p)
+M11=cell2mat(M(1,1));
+M12=cell2mat(M(1,2));
+M21=cell2mat(M(2,1));
+M22=cell2mat(M(2,2));
+MN11=mod(M11,p);
+MN12=mod(M12,p);
+MN21=mod(M21,p);
+MN22=mod(M22,p);
+MN11=num2cell(MN11(1,:),2);
+MN12=num2cell(MN12(1,:),2);
+MN21=num2cell(MN21(1,:),2);
+MN22=num2cell(MN22(1,:),2);
+output=[MN11 MN12;MN21 MN22];
